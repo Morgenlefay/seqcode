@@ -1,6 +1,6 @@
 # README of SeqCode v 1.0 
 
-Enrique Blanco (CRG, 2013-2020)
+Enrique Blanco, Mar Gonzalez-Ramirez and Luciano Di Croce (CRG, 2013-2020)
 
 `enrique.blanco at crg.eu`
 
@@ -13,7 +13,17 @@ Enrique Blanco (CRG, 2013-2020)
 
 ## 1. What is SeqCode?
 
-SeqCode is a family of applications designed to develop high-quality images and perform genome-wide calculations from high-throughput sequencing experiments. This software is presented into two distinct modes: web tools and command line. The website of SeqCode offers most functions to users with no previous expertise in bioinformatics, including operations on a selection of published ChIP-seq samples and applications to generate multiple classes of graphics from data files of the user. On the contrary, the standalone version of SeqCode allows bioinformaticians to run each command on any type of sequencing data locally in their computer. The architecture of the source code is modular and the input/output interface of the commands is suitable to be integrated into existing pipelines of genome analysis. SeqCode has been written in ANSI C, which favors the compatibility in every UNIX platform and grants a high performance and speed when analyzing sequencing data. Meta-plots, heatmaps, boxplots and the rest of images produced by SeqCode are internally generated using R. SeqCode relies on the RefSeq reference annotations and is able to deal with the genome and assembly release of every organism that is available from this consortium.
+SeqCode is a family of applications designed to develop high-quality images and perform genome-wide calculations from 
+high-throughput sequencing experiments. This software is presented into two distinct modes: web tools and command line. The 
+website of SeqCode offers most functions to users with no previous expertise in bioinformatics, including operations on a 
+selection of published ChIP-seq samples and applications to generate multiple classes of graphics from data files of the 
+user. On the contrary, the standalone version of SeqCode allows bioinformaticians to run each command on any type of 
+sequencing data locally in their computer. The architecture of the source code is modular and the input/output interface of 
+the commands is suitable to be integrated into existing pipelines of genome analysis. SeqCode has been written in ANSI C, 
+which favors the compatibility in every UNIX platform and grants a high performance and speed when analyzing sequencing 
+data. Meta-plots, heatmaps, boxplots and the rest of images produced by SeqCode are internally generated using R. SeqCode 
+relies on the RefSeq reference annotations and is able to deal with the genome and assembly release of every organism that 
+is available from this consortium.
 
 The SeqCode source code is accessible from GitHub at: https://github.com/eblancoga/seqcode
 
@@ -235,25 +245,25 @@ This is the full list of options for the command buildChIPprofile:
 
 Command | Description
 --------|-------------
-`buildChIPprofile` | generate ChIPseq/ATACseq/RNAseq profiles for genome browser visualization.
-`combineChIPprofiles` |  combine two genome-wide ChIPseq/ATACseq/RNAseq profiles.
-`combineTSSmaps` | produce ChIPseq/ATACseq/RNAseq heat maps from 2 samples around the TSS.
-`combineTSSplots` | produce averaged ChIPseq/ATACseq/RNAseq metaplots from 2 samples around the TSS.
+`buildChIPprofile` | generate sequencing data profiles for genome browser visualization.
+`combineChIPprofiles` | combine two genome-wide sequencing data profiles.
+`combineTSSmaps` | produce heatmaps of sequencing signal intensities from 2 samples around the TSS.
+`combineTSSplots` | produce averaged meta-plots of sequencing signal intensities from 2 samples around the TSS.
 `computemaxsignal` | calculate the max signal for genes in one genome-wide profile.
-`findPeaks` |  find peaks in ChIPseq/RNAseq/ATACseq experiments.
+`findPeaks` |  find peaks in sequencing data.
 `genomeDistribution` | examine the distribution of peaks within distinct genomic features.
 `matchpeaks` | compare 2 lists of peaks/regions.
 `matchpeaksgenes` | match peaks to genes.
 `processmacs` | clean MACS BedGraph profiles.
-`produceGENEmaps` | produce ChIPseq/ATACseq/RNAseq heat maps along a meta-gene representation.
-`produceGENEplots` | produce averaged ChIPseq/ATACseq/RNAseq metaplots along a normalized gene.
-`producePEAKmaps` |  produce ChIPseq/ATACseq/RNAseq heat maps centered in a list of peaks.
-`producePEAKplots` | produce averaged ChIPseq/ATACseq/RNAseq metaplots centered in a list of peaks.
-`produceTESmaps` | produce ChIPseq/ATACseq/RNAseq heat maps around the TES.
-`produceTESplots` | produce averaged ChIPseq/ATACseq/RNAseq metaplots around the TES.
-`produceTSSmaps` | produce ChIPseq/ATACseq/RNAseq heat maps around the TSS.
-`produceTSSplots` | produce averaged ChIPseq/ATACseq/RNAseq metaplots around the TSS.
-`recoverChIPlevels` | determine the ChIPseq/ATACseq/RNAseq avg/max/total counts of reads in a list of regions.
+`produceGENEmaps` | produce heatmaps of sequencing signal intensities along a meta-gene representation.
+`produceGENEplots` | produce averaged smeta-plots of sequencing signal intensities along a normalized gene.
+`producePEAKmaps` |  produce heatmaps of sequencing signal intensities centered in a list of peaks.
+`producePEAKplots` | produce averaged meta-plots of sequencing signal intensities centered in a list of peaks.
+`produceTESmaps` | produce heatmaps of sequencing signal intensities around the TES.
+`produceTESplots` | produce averaged meta-plots of sequencing signal intensities around the TES.
+`produceTSSmaps` | produce heatmaps of sequencing signal intensities around the TSS.
+`produceTSSplots` | produce averaged meta-plots of sequencing signal intensities around the TSS.
+`recoverChIPlevels` | determine the avg/max/total counts of reads in a list of regions.
 `scorePhastCons`  | score genomic regions with PhastCons conservation values.
 
 ### DATA FORMATS
@@ -279,9 +289,9 @@ used with SeqCode (e.g. gzip -d refGene.txt.gz).
 #### Sequencing reads: SAM/BAM formats
 
 SeqCode mainly analyzes the set of mapped reads of a sequencing experiment (e.g. ChIPseq/RNAseq/ATACseq) in SAM format. 
-This file format contains one line per read that is mapped, containing the location in the genome for such a read. BAM files,
-which are the compressed version of SAM files, can be also provided to SeqCode. For further information, users can access 
-the SAM format documentation at https://samtools.github.io/hts-specs/SAMv1.pdf.
+This file format contains one line per read that is mapped, containing the location in the genome for such a read. BAM
+files, which are the compressed version of SAM files, can be also provided to SeqCode. For further information, users 
+can access the SAM format documentation at https://samtools.github.io/hts-specs/SAMv1.pdf.
 
 #### BED and BedGraph formats
 
@@ -312,19 +322,19 @@ Please, check the following link for further information on our set of web funct
 
 Users can provide their own data file to run the following list of services with no restrictions:
 
-* Calculate the distribution of human/mouse genome features from a set of ChIP-seq peaks.
-* Match ChIP-seq peaks to genes based in human/mouse RefSeq transcript annotations.
+* Calculate the distribution of human/mouse genome features from a set of genomic regions.
+* Match genomic regions to genes based in human/mouse RefSeq transcript annotations.
 * Compare two sets of peaks or genomic regions to determine the degree of overlap.
 * Generate boxplots with multiple graphical options to customize the final result.
-* Perform PCA analysis, scatter-plots and heat-maps of genes based on expression or signal values.
+* Perform PCA plots, scatter plots and heatmaps of genes based on expression or signal values.
 * Produce Venn diagrams for multiple sets of elements and UpSet charts.
 * Basic operations on lists of elements such as join, filter and fold-change analysis.
 
 The rest of functions are offered in our web site for a preselected list of ChIP-seq experiments:
 
-* Generate profiles of ChIPseq/ATACseq/RNAseq samples for genome browser visualizations.
+* Generate profiles of sequencing data for genome browser visualizations.
 * Produce high-quality aggregated plots centered around TSS, TES, TSS-TES and peak centers.
-* Produce heat maps of ChIP-seq signal intensities around TSS, TES, TSS-TES and peak centers.
+* Produce heatmaps of sequencing signal intensities around TSS, TES, TSS-TES and peak centers.
 * Calculate the count of reads of one sequencing experiment on a set of regions.
 
 The SeqCode full distribution of commands from GitHub can be locally run with no file size restrictions.
@@ -337,7 +347,7 @@ The SeqCode full distribution of commands from GitHub can be locally run with no
 Please, cite the following reference when using one or more components of the SeqCode suite of software:
 
 TITLE. 
-E. Blanco, M. Gonzalez and L. Di Croce. 
+E. Blanco, M. Gonzalez-Ramirez and L. Di Croce. 
 JOURNAL (2019).
 
 ### SeqCode in the literature
@@ -374,7 +384,7 @@ RNAseq or ATACseq in our group.
 
 Software developers:
 - Enrique Blanco (senior bioinformatician)
-- Mar Gonzalez (PhD student)
+- Mar Gonzalez-Ramirez (PhD student)
 - Luciano Di Croce (group leader)
 
 # END of README
