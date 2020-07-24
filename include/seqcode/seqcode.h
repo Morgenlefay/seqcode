@@ -1001,3 +1001,12 @@ void ValidateRColorsPieCharts(char COLOR1[MAXCOLORNAME],
 			      char COLOR6[MAXCOLORNAME],
 			      char COLOR7[MAXCOLORNAME],
 			      dict* RColors);
+
+void SetViridisColorsPieCharts(char COLOR1[MAXCOLORNAME],
+			       char COLOR2[MAXCOLORNAME],
+			       char COLOR3[MAXCOLORNAME],
+			       char COLOR4[MAXCOLORNAME],
+			       char COLOR5[MAXCOLORNAME],
+			       char COLOR6[MAXCOLORNAME],
+			       char COLOR7[MAXCOLORNAME],
+			       int mode);
