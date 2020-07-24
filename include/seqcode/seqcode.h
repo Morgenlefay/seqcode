@@ -222,6 +222,9 @@ A. DEFINITIONS
 /* Maximum size for promoter regions        */
 #define MAXSIMPLIFIED 10000
 
+/* Maximum size for viridis palette         */
+#define MAXPALETTE 4
+
 /* Log10 noise threshold (heatmaps)         */
 #define NOISETHRESHOLD 1
 
