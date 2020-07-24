@@ -143,6 +143,15 @@ int main (int argc, char *argv[])
   ValidateRColorsPieCharts(COLOR1,COLOR2,COLOR3,
 			   COLOR4,COLOR5,COLOR6,
 			   COLOR7,RColors);
+  
+  /* Setting Viridis palette colors (optional) */
+  if (PALETTE)
+    {
+      SetViridisColorsPieCharts(COLOR1,COLOR2,COLOR3,
+				COLOR4,COLOR5,COLOR6,
+				COLOR7,PALETTE);
+    }
+
   printRes("Loading the R color schema");
    
   /* 2. Read the ChrSize file */
