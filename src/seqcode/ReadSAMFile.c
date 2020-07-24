@@ -90,7 +90,7 @@ void ReadSAMFile (char* FileName,
       
       /* Save the info from this BAM read */
       code = read->core.flag;
-
+      
       /* Control: reads with invalid chromosomes are omitted */
       if (read->core.tid == NOTFOUND)
 	{
@@ -128,7 +128,7 @@ void ReadSAMFile (char* FileName,
 	  else
 	    {
 	      /* Control: Out of range? */
-	      if (pos >= ChrSizes[key])
+	      if (pos >= ChrSizes[key] || pos < AVGL)
 		{
 		  /* Current read is not included into the calculations */
 		}
@@ -261,7 +261,7 @@ void ReadSAMPairedFile (char *FileName,
 	      else
 		{
 		  /* Control: Out of range? */
-		  if (pos >= ChrSizes[key])
+		  if (pos >= ChrSizes[key] || pos < AVGL)
 		    {
 		      /* Current read is not included into the calculations */
 		    }
