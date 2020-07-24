@@ -769,46 +769,67 @@ void ValidateRColorsPieCharts(char COLOR1[MAXCOLORNAME],
 			      dict* RColors)
 {
   int key;
+
+  if (strcmp(COLOR1,DEFAULT_COLOR1))
+    {
+      key = getkeyDict(RColors,COLOR1);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 1 (undefined in R:colors())");
+	}
+    }
+
+  if (strcmp(COLOR2,DEFAULT_COLOR2))
+    {
+      key = getkeyDict(RColors,COLOR2);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 2 (undefined in R:colors())");
+	}
+    }
+
+  if (strcmp(COLOR3,DEFAULT_COLOR3))
+    {
+      key = getkeyDict(RColors,COLOR3);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 3 (undefined in R:colors())");
+	}
+    }
+
+  if (strcmp(COLOR4,DEFAULT_COLOR4))
+    {
+      key = getkeyDict(RColors,COLOR4);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 4 (undefined in R:colors())");
+	}
+    }
+
+  if (strcmp(COLOR5,DEFAULT_COLOR5))
+    {
+      key = getkeyDict(RColors,COLOR5);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 5 (undefined in R:colors())");
+	}
+    }
+
+  if (strcmp(COLOR6,DEFAULT_COLOR6))
+    {
+      key = getkeyDict(RColors,COLOR6);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 6 (undefined in R:colors())");
+	}
+    }
   
-  key = getkeyDict(RColors,COLOR1);
-  if (key == NOTFOUND)
+  if (strcmp(COLOR7,DEFAULT_COLOR7))
     {
-      printError("Problems with the Color 1 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR2);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 2 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR3);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 3 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR4);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 4 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR5);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 5 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR6);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 6 (undefined in R:colors())");
-    }
-
-  key = getkeyDict(RColors,COLOR7);
-  if (key == NOTFOUND)
-    {
-      printError("Problems with the Color 7 (undefined in R:colors())");
+      key = getkeyDict(RColors,COLOR7);
+      if (key == NOTFOUND)
+	{
+	  printError("Problems with the Color 7 (undefined in R:colors())");
+	}
     }
 }
