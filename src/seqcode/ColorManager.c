@@ -833,3 +833,62 @@ void ValidateRColorsPieCharts(char COLOR1[MAXCOLORNAME],
 	}
     }
 }
+
+/* Check the existence of these two colors in the R color schema */
+void SetViridisColorsPieCharts(char COLOR1[MAXCOLORNAME],
+			       char COLOR2[MAXCOLORNAME],
+			       char COLOR3[MAXCOLORNAME],
+			       char COLOR4[MAXCOLORNAME],
+			       char COLOR5[MAXCOLORNAME],
+			       char COLOR6[MAXCOLORNAME],
+			       char COLOR7[MAXCOLORNAME],
+			       int mode)
+{
+  /* Define Viridis colors (1) */
+  if (mode==1)
+    {
+      strcpy(COLOR1,VIRIDIS_COLOR1);
+      strcpy(COLOR2,VIRIDIS_COLOR2);
+      strcpy(COLOR3,VIRIDIS_COLOR3);
+      strcpy(COLOR4,VIRIDIS_COLOR4);
+      strcpy(COLOR5,VIRIDIS_COLOR5);
+      strcpy(COLOR6,VIRIDIS_COLOR6);
+      strcpy(COLOR7,VIRIDIS_COLOR7);
+    }
+
+  /* Define Magma colors (2) */
+  if (mode==2)
+    {
+      strcpy(COLOR1,MAGMA_COLOR1);
+      strcpy(COLOR2,MAGMA_COLOR2);
+      strcpy(COLOR3,MAGMA_COLOR3);
+      strcpy(COLOR4,MAGMA_COLOR4);
+      strcpy(COLOR5,MAGMA_COLOR5);
+      strcpy(COLOR6,MAGMA_COLOR6);
+      strcpy(COLOR7,MAGMA_COLOR7);
+    }
+
+  /* Define Plasma colors (3) */
+  if (mode==3)
+    {
+      strcpy(COLOR1,PLASMA_COLOR1);
+      strcpy(COLOR2,PLASMA_COLOR2);
+      strcpy(COLOR3,PLASMA_COLOR3);
+      strcpy(COLOR4,PLASMA_COLOR4);
+      strcpy(COLOR5,PLASMA_COLOR5);
+      strcpy(COLOR6,PLASMA_COLOR6);
+      strcpy(COLOR7,PLASMA_COLOR7);
+    }
+  
+  /* Define Inferno colors (3) */
+  if (mode==4)
+    {
+      strcpy(COLOR1,INFERNO_COLOR1);
+      strcpy(COLOR2,INFERNO_COLOR2);
+      strcpy(COLOR3,INFERNO_COLOR3);
+      strcpy(COLOR4,INFERNO_COLOR4);
+      strcpy(COLOR5,INFERNO_COLOR5);
+      strcpy(COLOR6,INFERNO_COLOR6);
+      strcpy(COLOR7,INFERNO_COLOR7);
+    }
+}
