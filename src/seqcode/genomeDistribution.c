@@ -50,6 +50,9 @@ char COLOR7[MAXCOLORNAME];
 /* Pie chart gradient monocolor */
 int GRADIENT = 0;
 
+/* Pie chart viridis palette */
+int PALETTE = 0;
+
 /* Background color */
 char BGCOLOR[MAXCOLORNAME];
 
