@@ -70,6 +70,42 @@ A. DEFINITIONS
 #define DEFAULT_COLOR6 "#6198CEFF"
 #define DEFAULT_COLOR7 "#D696D9FF"
 
+/* Pie chart viridis colors (RGB)           */
+#define VIRIDIS_COLOR1 "#FDE725FF"
+#define VIRIDIS_COLOR2 "#8FD744FF"
+#define VIRIDIS_COLOR3 "#35B779FF"
+#define VIRIDIS_COLOR4 "#21908CFF"
+#define VIRIDIS_COLOR5 "#31688EFF"
+#define VIRIDIS_COLOR6 "#443A83FF"
+#define VIRIDIS_COLOR7 "#440154FF"
+
+/* Pie chart magma colors (RGB)           */
+#define MAGMA_COLOR1 "#FCFDBFFF"
+#define MAGMA_COLOR2 "#FEAF77FF"
+#define MAGMA_COLOR3 "#F1605DFF"
+#define MAGMA_COLOR4 "#B63679FF"
+#define MAGMA_COLOR5 "#721F81FF"
+#define MAGMA_COLOR6 "#2D1160FF"
+#define MAGMA_COLOR7 "#000004FF"
+
+/* Pie chart plasma colors (RGB)           */
+#define PLASMA_COLOR1 "#F0F921FF"
+#define PLASMA_COLOR2 "#FDB32FFF"
+#define PLASMA_COLOR3 "#ED7953FF"
+#define PLASMA_COLOR4 "#CC4678FF"
+#define PLASMA_COLOR5 "#9C179EFF"
+#define PLASMA_COLOR6 "#5D01A6FF"
+#define PLASMA_COLOR7 "#0D0887FF"
+
+/* Pie chart inferno colors (RGB)           */
+#define INFERNO_COLOR1 "#FCFFA4FF"
+#define INFERNO_COLOR2 "#FCB519FF"
+#define INFERNO_COLOR3 "#ED6925FF"
+#define INFERNO_COLOR4 "#BB3754FF"
+#define INFERNO_COLOR5 "#781C6DFF"
+#define INFERNO_COLOR6 "#330A5FFF"
+#define INFERNO_COLOR7 "#000004FF"
+
 /* Maximum number of distinct chromosomes   */
 #define MAXCHRS 100
 
