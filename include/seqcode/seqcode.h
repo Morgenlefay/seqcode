@@ -61,6 +61,15 @@ A. DEFINITIONS
 /* Maximum value to colorize the maps       */
 #define MAXCOLORIZE 100
 
+/* Pie chart default colors (RGB)           */
+#define DEFAULT_COLOR1 "#FA8072FF"
+#define DEFAULT_COLOR2 "#FCB519FF"
+#define DEFAULT_COLOR3 "#FDE725FF"
+#define DEFAULT_COLOR4 "#8FD744FF"
+#define DEFAULT_COLOR5 "#35C779FF"
+#define DEFAULT_COLOR6 "#6198CEFF"
+#define DEFAULT_COLOR7 "#D696D9FF"
+
 /* Maximum number of distinct chromosomes   */
 #define MAXCHRS 100
 
