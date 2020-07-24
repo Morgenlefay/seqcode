@@ -1085,7 +1085,7 @@ void CreateRscriptChart(char* RscriptFileName,
       fprintf(file,"pie(slices,labels=NA,col=c(\"%s\",\"%s\",\"%s\"),",
 	      COLOR1,COLOR2,COLOR3);
     }
-  fprintf(file,"init.angle=-90,clockwise=TRUE,radius=1)\n");
+  fprintf(file,"init.angle=90,clockwise=TRUE,radius=1)\n");
   
   fprintf(file,"text(x=0,y=1.25,\"%s (%d peaks)\",cex=1.75,font=2)\n",TrackName,nTotalPeaks);
   GetTime(mess,m);
@@ -1318,7 +1318,7 @@ void CreateRscriptChartDetailed(char* RscriptFileName,
       fprintf(file,"pie(slices,labels=NA, col=c(\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"),",
 	      COLOR1,COLOR2,COLOR3,COLOR4,COLOR5,COLOR6,COLOR7);
     }
-  fprintf(file,"init.angle=-90,clockwise=TRUE,radius=1)\n");
+  fprintf(file,"init.angle=90,clockwise=TRUE,radius=1)\n");
 
   fprintf(file,"text(x=0,y=1.25,\"%s (%d peaks)\",cex=1.75,font=2)\n",TrackName,nTotalPeaks);
   GetTime(mess,m);
